@@ -1,0 +1,28 @@
+/* Browser reset */
+html{
+	font-size: 65.5%;
+}
+
+*,
+*::before,
+*::after{
+	box-sizing: border-box;
+	padding: 0;
+	margin: 0;
+
+}
+
+/* Variables */
+:root{
+	--blue-color: #1E16A6;
+	--dark-blue-color: #080B2E;
+
+	--red-color: #F95957;
+
+	--yellow-color: #FFE200;
+}
+
+/* Header */
+
+/* Navigation */
+
