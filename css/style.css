@@ -2,6 +2,12 @@
 html{
 	font-size: 65.5%;
 	overflow-x: hidden !important;
+	scroll-behavior: smooth;
+}
+
+body{
+	height: 100%;
+	overflow: hidden !important;
 }
 
 @media screen and (max-width: 1200px){
@@ -57,85 +63,10 @@ h3{
 	font-weight: 400;
 }
 
-body{
-	height: 100%;
-	overflow: hidden !important;
-}
-
-/* FONTS */
-
-/* Font instructions
-	For bold text use font-weight; bold;
-	For extra bold text use font-weight: 800;
-
-	for italic text use font-style: italic;
-
-*/
-
-/* Dunbar text regular */
-@font-face {
-    font-family: 'DunbarText';
-    src: url('media/font/DunbarText-Regular.eot');
-    src: local('DunbarText'), local('DunbarText-Regular'),
-        url('media/font/DunbarText-Regular.eot?#iefix') format('embedded-opentype'),
-        url('media/font/DunbarText-Regular.woff2') format('woff2'),
-        url('media/font/DunbarText-Regular.woff') format('woff'),
-        url('media/font/DunbarText-Regular.ttf') format('truetype');
-    font-weight: normal;
-	font-style: normal;
-}
-
-/* Dunbar text medium */
-@font-face {
-    font-family: 'DunbarText-medium';
-    src: url('media/font/DunbarText-Medium.eot');
-    src: local('DunbarText Medium'), local('DunbarText-Medium'),
-        url('media/font/DunbarText-Medium.eot?#iefix') format('embedded-opentype'),
-        url('media/font/DunbarText-Medium.woff2') format('woff2'),
-        url('media/font/DunbarText-Medium.woff') format('woff'),
-        url('media/font/DunbarText-Medium.ttf') format('truetype');
-    font-weight: 500;
-    font-style: normal;
-}
-
-
-/* Dunbar Tall medium */
-@font-face {
-    font-family: 'DunbarTall-medium';
-    src: url('media/font/DunbarTall-Medium.eot');
-    src: local('DunbarTall Medium'), local('DunbarTall-Medium'),
-        url('media/font/DunbarTall-Medium.eot?#iefix') format('embedded-opentype'),
-        url('media/font/DunbarTall-Medium.woff2') format('woff2'),
-        url('media/font/DunbarTall-Medium.woff') format('woff'),
-        url('media/font/DunbarTall-Medium.ttf') format('truetype');
-    font-weight: 500;
-    font-style: normal;
-}
-
-/* Dunbar tall regular */
-@font-face {
-    font-family: 'DunbarTall';
-    src: url('media/font/DunbarTall-Regular.eot');
-    src: local('DunbarTall'), local('DunbarTall-Regular'),
-        url('media/font/DunbarTall-Regular.eot?#iefix') format('embedded-opentype'),
-        url('media/font/DunbarTall-Regular.woff2') format('woff2'),
-        url('media/font/DunbarTall-Regular.woff') format('woff'),
-        url('media/font/DunbarTall-Regular.ttf') format('truetype');
-    font-weight: normal;
-    font-style: normal;
-}
-
-/* Dunbar tall Book */
-@font-face {
-    font-family: 'DunbarTall Book';
-    src: url('media/font/DunbarTall-Book.eot');
-    src: local('DunbarTall Book'), local('DunbarTall-Book'),
-        url('media/font/DunbarTall-Book.eot?#iefix') format('embedded-opentype'),
-        url('media/font/DunbarTall-Book.woff2') format('woff2'),
-        url('media/font/DunbarTall-Book.woff') format('woff'),
-        url('media/font/DunbarTall-Book.ttf') format('truetype');
-    font-weight: normal;
-    font-style: normal;
+video{
+	width: 100%;
+	height: 50rem;
+	object-fit: cover;
 }
 
 /* Variables */
@@ -145,16 +76,13 @@ body{
 	--linear-gradient-blue: #1c16a7;
 	--blue-color: #1E16A6;
 	--dark-blue-color: #080B2E;
+	--dark-text-color: #151121;
 	--red-color: #F95957;
 	--yellow-color: #FFE200;
 
 	/* Font families */
-	--dunbar-text: "DunbarText", sans-serif;
-	--dunbar-text-medium: "DunbarText-medium", sans-serif;
-	--dunbar-tall: "DunbarTall", sans-serif;
-	--dunbar-tall-medium: "DunbarTall-medium", sans-serif;
-	--dunbar-tall-book: "DunbarTall Book", sans-serif;
-
+	--dunbar-text: "dunbar-text", sans-serif;
+	--dunbar-tall: "dunbar-tall", sans-serif;
 }
 
 /* Utility classes */
@@ -165,10 +93,10 @@ body{
 	color: var(--blue-color);
 	border: none;
 	border-radius: 5rem;
-	font-family: var(--dunbar-tall-medium);
+	font-family: var(--dunbar-tall);
 	text-decoration: none;
 	font-size: 2rem;
-	font-weight: 400;
+	font-weight: 600;
 	white-space: nowrap;
 }
 
@@ -180,11 +108,18 @@ body{
 }
 
 .bold{
+	font-weight: 700;
+}
+
+.statement-bold{
 	font-weight: 800;
+	font-style: italic;
 }
 
 .active{
 	text-decoration: underline !important;
+	font-weight: 800 !important;
+	font-style: italic;
 }
 
 .blue-background{
@@ -208,7 +143,7 @@ body{
 }
 
 .black-text{
-	color: black !important;
+	color: #454545 !important;
 }
 
 .card-height-100{
@@ -381,7 +316,8 @@ body{
 
 .nav-menu .menu-item a {
 	font-family: var(--dunbar-tall);
-	font-size: 1.6rem;
+	font-size: 1.7rem;
+	font-weight: 500;
 	color: #fff;
 	display: block;
 	line-height: 3rem;
@@ -674,7 +610,7 @@ body{
 .text-and-image .text-container .text-and-image-content{
 	font-family: var(--dunbar-text);
 	
-	color: black;
+	color: var(--dark-text-color);
 	font-size: 2rem;
 	line-height: 1.5;
 }
@@ -868,7 +804,6 @@ body{
 
 /* About */
 .about{
-	margin-top: -5rem;
 	width: 100%;
 	height: auto;
 	display: flex;
@@ -895,6 +830,7 @@ body{
 
 .about .container-left .about-title{
 	font-size: 4rem;
+	font-style: italic;
 	width: 70%;
 	font-family: var(--dunbar-tall);
 	text-shadow: 2px 3px 3px var(--red-color);
@@ -930,13 +866,42 @@ body{
 	background-color: var(--red-color);
 }
 
-.testimonial-slider .inner-container{
+.testimonial-slider .carousel-inner-container i{
+	cursor: pointer;
+}
+
+.testimonial-slider .testimonial{
+	padding-left: 5rem;
+}
+
+@media screen and (max-width: 700px) {
+	.testimonial-slider .testimonial{
+		padding-left: 2.5rem;
+	}
+}
+
+.testimonial-slider *{
+	text-decoration: none !important;
+}
+
+.testimonial-slider .carousel-inner-container{
 	padding: 5rem;
 	margin: 0 auto;
 	width: 70%;
 
 	display: flex;
 	align-items: center;
+	justify-content: center;
+}
+
+.testimonial-slider .carousel-inner-container{
+	color: var(--dark-blue-color);
+}
+
+@media screen and (max-width: 700px) {
+	.testimonial-slider .carousel-inner-container{
+		width: 100%;
+	}
 }
 
 .testimonial-slider .testimonial{
@@ -944,8 +909,19 @@ body{
 }
 
 .testimonial-slider .testimonial .testimonial-content{
-	font-size: 2rem;
+	font-size: 2.5rem;
+	font-weight: 500;
+	font-style: normal !important;
+    line-height: 1.7;
 	color: var(--dark-blue-color);
+}
+
+.testimonial-slider .testimonial .testimonial-meta{
+	color: var(--dark-blue-color);
+	font-size: 1.5rem;
+	font-style: normal !important;
+	font-family: var(--dunbar-tall);
+	margin-top: 2rem;
 }
 
 /* Blog posts */
@@ -980,7 +956,7 @@ body{
 	font-size: 4rem;
 	font-family: var(--dunbar-tall);
 	text-shadow: 2px 3px 3px var(--red-color);
-	font-weight: 800;
+	font-weight: 700;
 	font-style: italic;
 	margin-right: 1rem;
 }
@@ -996,7 +972,7 @@ body{
 	height: 1px;
 	width: 100%;
 	background-color: #fff;
-	margin: 2rem 0;
+	margin: 4rem 0;
 }
 
 .blog-posts .blog-post{
@@ -1014,6 +990,18 @@ body{
 .blog-posts .blog-post .right-container,
 .blog-posts .blog-post .left-container{
 	width: 47.5%;
+}
+
+.blog-posts .blog-post .right-container{
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+}
+
+@media screen and (max-width: 1330px){
+	.blog-posts .blog-post .right-container{
+		display: block;
+	}
 }
 
 @media screen and (max-width: 600px){
@@ -1039,20 +1027,22 @@ body{
 	font-family: var(--dunbar-tall);
 	font-size: 2.75rem;
 	margin-bottom: 2rem;
-	font-weight: 800;
+	font-weight: 700;
 
 }
 
 .blog-posts .blog-post .right-container .blog-post-excerpt{
 	font-family: var(--dunbar-text);
-	font-size: 2rem;
+	font-size: 1.7rem;
 	margin-bottom: 2rem;
 }
 
 .blog-posts .blog-post .right-container .read-more-button{
 	text-decoration: underline;
 	font-family: var(--dunbar-tall);
-	font-size: 2.25rem;
+	font-weight: 500;
+	font-size: 2rem;
+	font-style: italic;
 	transition: all .2s ease-in;
 }
 
@@ -1126,7 +1116,7 @@ body{
 .cta-inner-container .cta-title{
 	font-family: var(--dunbar-tall);
 	font-style: italic;
-	font-weight: 800;
+	font-weight: 600;
 	font-size: 5rem;
 }
 
@@ -1168,6 +1158,8 @@ body{
 
 /* //// BLOG POSTS PAGE ///// */
 .blog-page .pick-a-category{
+	/* -webkit-appearance: none; */
+	cursor: pointer;
 	width: 25rem;
 	background-color: var(--blue-color);
 	padding: .8rem 3rem .5rem 1rem;
@@ -1188,6 +1180,7 @@ body{
 @media screen and (max-width: 500px){
 	.blog-page .title-container h1{
 		width: 95%;
+		margin: 0 auto;
 	}
 	
 	.blog-page .title-container h1 > br{
@@ -1265,7 +1258,6 @@ body{
 	font-size: 3.5rem;
     font-weight: 800;
 	font-family: var(--dunbar-tall);
-	background-color: #fff;
 	color: var(--blue-color);
 }
 
@@ -1296,8 +1288,9 @@ body{
 }
 
 .single-blog-post .blog-post-header .back-to-blog a{
-	color: blue;
-	font-size: 2rem;
+	color: var(--blue-color);
+	font-size: 1.7rem;
+	font-weight: 600;
 	font-family: var(--dunbar-tall);
 	margin-left: 2rem;
 }
@@ -1315,7 +1308,7 @@ body{
 }
 
 .single-blog-post .blog-meta-container .meta-data{
-	font-size: 2rem;
+	font-size: 1.7rem;
 
 	display: flex;
 	align-items: center;
@@ -1335,7 +1328,7 @@ body{
 
 .single-blog-post .single-blog-post-title{
 	font-family: var(--dunbar-tall);
-	font-weight: 800;
+	font-weight: 700;
 	font-style: italic;
 	color: var(--blue-color);
 	font-size: 5rem;
@@ -1392,16 +1385,10 @@ body{
 
 .single-blog-post-content .inner-container > p{
 	margin: 2rem 0;
-	color: #000;
+	color: var(--dark-text-color);
 	font-size: 1.7rem;
 	line-height: 1.7;
 	font-family: var(--dunbar-text);
-}
-
-.single-blog-post-content .inner-container > video{
-	width: 100%;
-	height: 50rem;
-	object-fit: cover;
 }
 
 @media screen and (max-width: 700px){
@@ -1435,7 +1422,7 @@ body{
 
 .podcast-content .inner-container .series-number{
 	font-family: var(--dunbar-tall);
-	font-weight: 800;
+	font-weight: 700;
 	font-style: italic;
 	text-align: center;
 	color: var(--blue-color);
@@ -1447,7 +1434,7 @@ body{
 	font-family: var(--dunbar-text);
 	font-size: 2rem;
 	text-align: center;
-	color: #000;
+	color: var(--dark-text-color);
 	margin-top: 3rem;
 }
 
@@ -1467,6 +1454,7 @@ body{
 .episode-container .episode-title{
 	font-family: var(--dunbar-tall);
 	color: var(--blue-color);
+	font-weight: 700;
 	margin-bottom: 2.5rem;
 }
 
@@ -1480,7 +1468,7 @@ body{
 
 .episode-container .episode-content{
 	font-family: var(--dunbar-text);
-	color: #000;
+	color: var(--dark-text-color);
 	font-size: 2rem;
 	margin-bottom: 2rem;
 	line-height: 1.7;
@@ -1500,6 +1488,185 @@ body{
 
 }
 
+/* ////// WHAT WE DO PAGE ///// */
+@media screen and (max-width: 1100px) {
+	.what-we-do .inner-container{
+		width: 90% !important;
+	}
+}
+.reusable-blocks-a{
+	width: 100%;
+	background-color: #fff;
+}
+
+.reusable-blocks-a .inner-container{
+	width: 60%;
+	margin: 0 auto;
+}
+
+.centered-text-block{
+	text-align: center;
+}
+
+.centered-text-block .title{
+	font-family: var(--dunbar-tall);
+    font-weight: 700;
+    font-style: italic;
+    text-align: center;
+    color: var(--blue-color);
+    padding-top: 10rem;
+    font-size: 5rem;
+	margin-bottom: 3rem;
+}
+
+.centered-text-block .content{
+	font-size: 2rem;
+	font-family: var(--dunbar-text);
+	color: var(--dark-text-color);
+	margin-bottom: 2rem;
+}
+
+.what-we-do .full-width-divider{
+	width: 100%;
+	height: 1px;
+	margin: 5rem 0;
+}
+
+.image-and-text-block{
+	width: 100%;
+	margin: 5rem 0;
+
+	display: flex;
+	justify-content: space-between;
+}
+
+@media screen and (max-width: 650px) {
+	.image-and-text-block{
+		flex-direction: column !important;
+	}
+}
+
+.image-and-text-block .left-container,
+.image-and-text-block .right-container{
+	width: 48%;
+}
+
+@media screen and (max-width: 650px) {
+	.image-and-text-block .left-container,
+	.image-and-text-block .right-container{
+		width: 100%;
+	}
+}
+
+.image-and-text-block .left-container{
+	display: flex;
+	align-items: center;
+}
+
+.image-and-text-block .left-container .text-container .title{
+	font-family: var(--dunbar-tall);
+	color: var(--blue-color);
+	font-size: 3rem;
+	font-weight: 700;
+	margin-bottom: 2rem;
+}
+
+.image-and-text-block .left-container .text-container .sub-title,
+.image-and-text-block .left-container .text-container .content{
+	font-family: var(--dunbar-text);
+	color: var(--dark-text-color);
+	margin-bottom: 2rem;
+}
+
+.image-and-text-block .left-container .text-container .sub-title{
+	font-size: 2rem;
+}
+
+.image-and-text-block .left-container .text-container .content{
+	font-size: 1.7rem;
+}
+
+.image-and-text-block .right-container > img{
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+}
+
+.text-and-video{
+	width: 100%;
+}
+
+.text-and-video .inner-container{
+	width: 60%;
+	margin: 2rem auto 0 auto;
+}
+
+.paragraph{
+	width: 100%;
+	font-family: var(--dunbar-text);
+	font-size: 1.7rem;
+	color: var(--dark-text-color);
+	margin-bottom: 2rem;
+	line-height: 1.5;
+}
+
+.two-column-text-block{
+	width: 100%;
+	margin: 5rem 0;
+	
+	display: flex;
+	justify-content: space-between;
+}
+
+@media screen and (max-width: 650px) {
+	.two-column-text-block{
+		flex-direction: column;
+	}
+}
+
+.two-column-text-block .left-column,
+.two-column-text-block .right-column{
+	width: 48%;
+}
+
+@media screen and (max-width: 650px) {
+	.two-column-text-block .left-column,
+	.two-column-text-block .right-column{
+		width: 100%;
+	}
+}
+
+@media screen and (max-width: 650px) {
+	.two-column-text-block .right-column{
+		margin-top: 3rem;
+	}
+}
+
+.two-column-text-block .title{
+	font-family: var(--dunbar-tall);
+	color: var(--blue-color);
+	font-size: 3rem;
+	font-weight: 700;
+	margin-bottom: 2rem;
+}
+
+.two-column-text-block p{
+	font-family: var(--dunbar-text);
+	color: var(--dark-text-color);
+	margin-bottom: 2rem;
+	font-size: 1.7rem;
+	line-height: 1.5;
+}
+
+.reusable-blocks-b{
+	width: 100%;
+}
+
+.reusable-blocks-b .inner-container{
+	width: 60%;
+	margin: 0 auto;
+	padding-bottom: 5rem;
+}
 
 
 /* Footer */
@@ -1610,7 +1777,7 @@ body{
 .footer .inner-container .links-container{
 	align-items: center;
 	font-size: 2rem;
-	font-family: var(--dunbar-text-medium);
+	font-family: var(--dunbar-text);
 	font-weight: 400;
 	font-style: italic;
 
@@ -1649,7 +1816,7 @@ body{
 }
 
 .footer .inner-container .copyright{
-	font-family: var(--dunbar-text-medium);
+	font-family: var(--dunbar-text);
 	font-size: 2rem;
 }
 
