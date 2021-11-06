@@ -10,18 +10,24 @@
 	<!-- Font awesome -->
 	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css" integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm" crossorigin="anonymous">
 
+	<!-- Dunbar font -->
+	<link rel="stylesheet" href="https://use.typekit.net/lxp1cmt.css">
+
 	<!-- Google icons -->
 	<link href="https://fonts.googleapis.com/icon?family=Material+Icons"
       rel="stylesheet">
 
+	<!-- Owl carousel -->
+	<link rel="stylesheet" href="css/owl-carousel/owl.carousel.min.css">
+	
 	<!-- CSS -->
-	<link rel="stylesheet" href="style.css">
+	<link rel="stylesheet" href="css/style.css">
 
 	<title>Think Again | We build brands with impact</title>
 </head>
 <body>
 
-	<header class="header">
+	<header class="header" id="head">
 
 		<!-- Navigation -->
 		<nav class="navbar">
@@ -35,7 +41,7 @@
 		  
 			  <ul id="primary-menu" class="menu nav-menu">
 				<li class="menu-item current-menu-item">
-					<a class="nav__link active"  href="index.html">Home</a>
+					<a class="nav__link active"  href="index.html">home</a>
 				</li>
 				<li class="menu-item current-menu-item">
 					<a class="nav__link"  href="what-we-do.html">what we do</a>
@@ -47,7 +53,7 @@
 					<a class="nav__link"  href="podcast.html">podcast</a>
 				</li>
 				<li class="menu-item current-menu-item">
-					<a class="nav__link"  href="contact.html">contact</a>
+					<a class="nav__link" id="nav-contact" href="#cta">contact</a>
 				</li>
 
 			  </ul>
@@ -74,7 +80,7 @@
 
 				  <!-- button -->
 				  <div class="button-container">
-					  <a href="#" class="btn-primary">Let's talk</a>
+					  <a href="#cta" class="btn-primary">Let's talk</a>
 				  </div>
 			  </div>
 		  </div>
@@ -166,7 +172,7 @@
 		<section class="quotes">
 			<div class="inner-container">
 				<div class="quote-container">
-					<p>We'll keep it <span class="bold">simple</span> as this is what we know creates a real impact on your audience</p>
+					<p>We'll keep it <span class="statement-bold">simple</span> as this is what we know creates a real impact on your audience</p>
 				</div>
 	
 				<div class="dot-container">
@@ -176,7 +182,7 @@
 				</div>
 	
 				<div class="quote-container">
-					<p>We'll keep it <span class="bold">fresh</span> and look outside our comfort zones for creative inspiration</p>
+					<p>We'll keep it <span class="statement-bold">fresh</span> and look outside our comfort zones for creative inspiration</p>
 				</div>
 	
 				<div class="dot-container">
@@ -186,7 +192,7 @@
 				</div>
 	
 				<div class="quote-container">
-					<p>We'll <strong>equip you</strong> for whatever comes next and leave you in the best place to grow your brand</p>
+					<p>We'll <span class="statement-bold">equip you</span> for whatever comes next and leave you in the best place to grow your brand</p>
 				</div>
 			</div>
 		</section>
@@ -235,7 +241,7 @@
 		</div>
 
 		<!-- About section -->
-		<section class="about">
+		<section class="about margin-top-minus-50">
 			<div class="inner-container">
 				<div class="container-left">
 					<h2 class="about-title">
@@ -257,25 +263,29 @@
 		
 		<!-- Testimonial slider -->
 		<section class="testimonial-slider">
-			<div class="inner-container">
+			<div class="carousel-inner-container">
 
 				<!-- left arrow -->
 				<div class="left-arrow">
-					<
+					<i class="fas fa-chevron-left fa-4x customPrevBtn"></i>
 				</div>
 
 				<!-- Testimonial container -->
-				<div class="testiomial-container">
+				<div class="owl-carousel">
 					<div class="testimonial">
-						<p class="testimonial-content"><span class="left-quote">“</span>“I’m really proud of what we have achieved together and I can only thank you for your patience and attention to detail. You’ve done a smashing job!<span class="right-quote">“</span></p>
+						<p class="testimonial-content"><span class="left-quote">“</span>I’m really proud of what we have achieved together and I can only thank you for your patience and attention to detail. You’ve done a smashing job!<span class="right-quote">“</span></p>
 						<div class="testimonial-meta"><span class="name">Izabella</span> <span class="line">-</span> <span class="business-name">retailsolutions</span></div>
 					</div>
-					
+
+					<div class="testimonial">
+						<p class="testimonial-content"><span class="left-quote">“</span>I’m really proud of what we have achieved together and I can only thank you for your patience and attention to detail. You’ve done a smashing job!<span class="right-quote">“</span></p>
+						<div class="testimonial-meta"><span class="name">Izabella</span> <span class="line">-</span> <span class="business-name">retailsolutions</span></div>
+					</div>
 				</div>
 
 				<!-- left arrow -->
-				<div class="right-arrow">
-					>
+				<div class="right-arrow ">
+					<i class="fas fa-chevron-right fa-4x customNextBtn"></i>
 				</div>
 			</div>
 		</section>
@@ -305,7 +315,7 @@
 						</p>
 						
 						<div class="button-container">
-							<a href="#" class="read-more-button">Read more </a>
+							<a href="#" class="read-more-button">Read More </a>
 							<span class="material-icons">east</span>
 						</div>
 						
@@ -317,7 +327,7 @@
 		<!-- Blog posts end -->
 
 		<!-- CTA -->
-		<section class="cta">
+		<section class="cta" id="cta">
 			<div class="cta-inner-container">
 				<div class="text-container">
 					<h2 class="cta-title">Let's talk</h2>
@@ -397,7 +407,13 @@
 		</div>
 	</footer>
 
+	<!-- Jquery -->
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+	
+	<!-- Owl carousel -->
+	<script src="js/owl-carousel/owl.carousel.min.js"></script>
+
 	<!-- JavaScript -->
-	<script src="script.js"></script>
+	<script src="js/script.js"></script>
 </body>
 </html>
