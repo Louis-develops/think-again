@@ -75,7 +75,7 @@ video{
 	/* Colors */
 	--linear-gradient-blue: #1c16a7;
 	--blue-color: #1E16A6;
-	--dark-blue-color: #080B2E;
+	--dark-blue-color: rgb(8, 11, 46);
 	--dark-text-color: #151121;
 	--red-color: #F95957;
 	--yellow-color: #FFE200;
@@ -310,7 +310,7 @@ video{
    }
 
    .menu-active .nav-menu a{
-		color: var(--blue-color) !important;
+		color: var(--dark-blue-color) !important;
    }
 }
 
@@ -332,8 +332,8 @@ video{
 
 @media screen and (max-width: 768px) {
 	.nav-menu .menu-item a {
-		font-size: 2rem;
-		margin: .8rem;
+		font-size: 3rem;
+		margin: 1rem;
    }
 }
 
