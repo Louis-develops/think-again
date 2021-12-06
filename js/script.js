@@ -21,7 +21,7 @@
 
 // Testimonial slider
 $(document).ready(function(){
-  $(".owl-carousel").owlCarousel({
+  $(".testimonial-carousel").owlCarousel({
 	items : 1, 
 	itemsDesktop : false,
 	itemsDesktopSmall : false,
@@ -43,9 +43,20 @@ $('.customPrevBtn').click(function() {
     $(".owl-carousel").trigger('prev.owl.carousel', [300]);
 });
 
+// Brands slider
+$(document).ready(function(){
+	$(".brands-carousel").owlCarousel({
+		loop: true,
+	  	autoplay: 3000, //Set AutoPlay to 3 seconds
+		autoPlaySpeed: 5000,
+        autoPlayTimeout: 5000,
+      	items : 1,
+		center: true
+	});
+});
+
 // Smooth scroll. Works on mobile/safari
 (function smoothScroll(){
-		console.log("screen width less than 1000")
 		$('a[href*="#"]')
 	// Remove links that don't actually link to anything
 	.not('[href="#"]')
