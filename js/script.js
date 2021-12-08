@@ -47,9 +47,19 @@ $('.customPrevBtn').click(function() {
 $(document).ready(function(){
 	$(".brands-carousel").owlCarousel({
 		loop: true,
-	  	autoplay: 3000, //Set AutoPlay to 3 seconds
-		autoPlaySpeed: 5000,
-        autoPlayTimeout: 5000,
+	  	autoplay: true, //Set AutoPlay to 3 seconds
+		autoplaySpeed: 3000,
+      	items : 1,
+		center: true
+	});
+});
+
+// Cards slider
+$(document).ready(function(){
+	$(".cards-carousel").owlCarousel({
+		loop: true,
+	  	autoplay: true, //Set AutoPlay to 3 seconds
+		autoplaySpeed: 3000,
       	items : 1,
 		center: true
 	});
@@ -92,6 +102,4 @@ $(document).ready(function(){
 		}
 		}
 	});
-})()
-
-
+})();
